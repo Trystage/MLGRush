@@ -116,7 +116,6 @@ public class LobbyHandler {
     }
 
     public void setLobbyItems(Player player) {
-        player.getInventory().clear();
         if (getSlot("lobby.slots.challanger", 0) >= 0) {
             player.getInventory().setItem(getSlot("lobby.slots.challanger", 0), new ItemBuilder(Material.DIAMOND_SWORD).setDisplayName(MLGRush.getString("items.challanger")).build());
         }
