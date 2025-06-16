@@ -118,7 +118,8 @@ public class GameListener implements Listener {
                 event.setCancelled(false);
             if(session.getMap().getMaxBuildHeight() <= event.getBlock().getY() ||
                     session.getMap().isInRegion(event.getBlock().getLocation()) ||
-                    session.getMap().isSpawnBlock(event.getBlock().getLocation())) {
+                    session.getMap().isSpawnBlock(event.getBlock().getLocation()) ||
+                    session.getMap().isBedDefence(event.getBlock().getLocation())) {
                 event.setCancelled(true);
             }else {
                 session.getMap().getPlacedBlocks().add(event.getBlock());
