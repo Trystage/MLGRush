@@ -61,9 +61,7 @@ public class GameListener implements Listener {
             Player player = (Player) event.getEntity();
             Player damager = (Player) event.getDamager();
             SpectatorHandler spectatorHandler = MLGRush.getInstance().getGameHandler().getLobbyHandler().getSpectatorHandler();
-            System.out.println(damager.getName() + " is spec?: " + spectatorHandler.isSpectating(damager));
             if(spectatorHandler.isSpectating(damager) || spectatorHandler.isSpectating(player)) {
-                System.out.println("Spectator");
                 event.setCancelled(true);
                 return;
             }
