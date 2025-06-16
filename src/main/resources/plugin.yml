@@ -28,3 +28,4 @@ commands:
     aliases:
       - togglequeue
     description: Toggle the queue
+    permission: mlgrush.join
